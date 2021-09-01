@@ -71,3 +71,5 @@ vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori 
     $annabelle->setStudente(false);
 
     var_dump($annabelle);
+
+    
