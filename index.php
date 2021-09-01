@@ -7,7 +7,9 @@ vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori 
 
 <?php
 
-    //defiunire classe
+    // header('Content-Type: application/json');
+
+    //definire classe
     class Movie {
 
         // dichiarare variabili di istanza
@@ -18,13 +20,12 @@ vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori 
         public $sconto_studente = 'Nessuno sconto';
 
 
-
         // definire un construttore 
         function __construct($_titolo, $_genere, $_prezzo) {
 
             $this->titolo = $_titolo;
             $this->genere = $_genere;
-            $this->prezzo = $_prezzo;
+            $this->prezzo = (int)$_prezzo;
 
         }
 
@@ -59,8 +60,9 @@ vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori 
     $harry_potter = new Movie('Harry potter', 'Fantasy', 10 . ' ' . 'Euro');
 
     $harry_potter->setStudente(true);
+  
+    var_dump( $harry_potter );
 
-    var_dump($harry_potter);
 
     
     //Secondo oggetto
